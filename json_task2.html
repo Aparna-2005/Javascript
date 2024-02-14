@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <table border="2" cellpadding="20">
+        <thead>
+          <th>Id</th>
+          <th>Title</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th>Description</th>
+          <th>Rating</th>
+        </thead>
+        <tbody id="fetchdata"></tbody>
+      </table>
+      <script>
+        fetch("https://fakestoreapi.com/products?limit=5")
+        .then((sep) => {
+            return sep.json();
+        })
+        .then((dis) => {
+            let tabledata=document.getElementById("fetchdata")
+            let out=""
+            dis.map(output =>{
+                out+=`<tr>
+                    <td>${output.id}</td>
+                    <td>${output.title}</td>
+                    <td>${output.price}</td>
+                    <td>${output.category}</td>
+                    <td>${output.description}</td>
+                    <td>${output.rating.rate}
+                        ${output.rating.count}</td>
+                    </tr>`
+            })
+            tabledata.innerHTML=out
+        })
+      </script>
+</body>
+</html>

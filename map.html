@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//             const map1 = new Map(); // an empty map
+//            console.log(map1); 
+
+
+// let map2 = new Map();
+
+// map2.set('info', {name: 'Jack', age: 26});
+// console.log(map2); // output --> Map {"info" => {name: "Jack", age: 26}}
+
+// let map3 = new Map();
+// let obj = {};
+// map3.set(obj, {name: 'Jack', age: "26"});
+// console.log(map3); // Map {{} => {name: "Jack", age: "26"}}
+
+/*var map=new Map([
+    ["20","number"],
+    ["name","Sharanyaa"]
+])
+document.write(map.get("20"));
+var items=new Map([
+    ["Fruits",10],
+    ["Groceries",20],
+    ["Veg",30]
+])
+document.write("Before Modifying:",items.get("Fruits"),"<br>")
+items.set("Fruits",20)
+document.write("After Modify:",items.get("Fruits"),"<br>")
+document.write("Checking:",items.has("Fruits"),"<br>")
+document.write("Size of Map:",items.size,"<br>")*/
+
+                    // task - 1
+
+/*function double(num){
+   return num.map((num) =>num*2) 
+}
+console.log(double([3,5,8]))*/
+
+                // task-2
+
+/*function capitalize(str){
+    return str.map((str) => str.toUpperCase())
+}
+console.log(capitalize(["aparna"]))*/$
+
+                            // task - 3
+
+function squareroot(num){
+    return num.map((num) => Math.sqrt(num))
+}
+console.log(squareroot([25,64,49]))
+
+                            // task - 4
+
+function temp(cel){
+    return cel.map((cel) => (cel * 9/5) + 32.)
+}
+console.log(temp([25,64,49]))
+
+                                    // task - 5
+
+function temp(cel){
+    return cel.map((cel) =>{
+        if(cel > 90){
+                return "Grade A"
+        }
+        else if(cel > 75 && cel<90){
+            return "Grade B"
+        }
+        else if(cel >65 && cel < 75){
+            return "grade C"
+        }
+        else if(cel > 45 && cel  < 65){
+            return "Grade D"
+        }
+        else {
+            return "Grade E"
+        }
+    }
+        )
+}
+console.log(temp([25,64,49]))
+
+
+
+
+// const calculateGrades = scores => {
+//   return scores.map(score => {
+//     if (score >= 90 && score <= 100) {
+//       return 'A';
+//     } else if (score >= 80 && score <= 89) {
+//       return 'B';
+//     } else if (score >= 70 && score <= 79) {
+//       return 'C';
+//     } else if (score >= 60 && score <= 69) {
+//       return 'D';
+//     } else {
+//       return 'F';
+//     }
+//   });
+// };
+// console.log(calculateGrades([88, 92, 75, 62, 95]));
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     button{
+        width:100px;
+        height:25px;
+        border:2px solid black;
+        margin-left: 100px;
+        margin-top: 10px;
+     }
+     label{
+        font-size: 24px;
+     }
+     #name{
+        width:150px;
+        height: 25px;
+     }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label>Enter Your Name:</label>
+        <input type="text" id="name" placeholder="Enter Your Name here..."><br>
+        <label>Enter Phone number:</label>
+        <input type="tel" id="tel" placeholder="Enter tel here..."><br>
+        <button onclick="sub()">Submit</button>
+    </form>
+    <script>
+       function sub(){
+       let ph=document.getElementById("tel")
+  var phoneno = /^\d{10}$/
+  if(ph.value.match(phoneno))
+  {
+    alert("Number is correct")
+      return true;
+        }
+      else
+        {
+        alert("Number contains 10digits");
+        return false;
+        }
+}
+
+    </script>
+</body>
+
+</html>

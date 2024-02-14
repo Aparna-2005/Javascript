@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+</head>
+<body>
+    <table border="2" cellpadding="10">
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Image</th>
+        </thead>
+        <tbody id="showdata"></tbody>
+    </table>
+
+    <script>
+        fetch("file.json")
+        .then((sep) =>{
+            return sep.json();
+        })
+        .then((data) => {
+            let display=document.getElementById("showdata")
+            disp=" "
+            data.map(output => {
+                disp+=`<tr>
+                    <td>${output.id}</td>
+                    <td>${output.name}</td>
+                    <td>${output.age}</td>
+                    <td><img src=${output.img} width="100px" height="100px"></td>
+                    </tr>`
+            })
+            display.innerHTML=disp
+        })
+
+    </script>
+</body>
+</html>

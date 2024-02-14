@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task - 3</title>
+    <style>
+        body{
+          background-image: linear-gradient(to bottom left,#80ffe5,#ff80ff ,#80ffe5);
+
+            width:auto;
+    height:auto;
+    text-align: center;
+    border:10px inset blue;
+    margin: 150px;
+    padding: 20px;
+    height: 350px;
+        }
+        #select{
+          font-size: 25px;
+          font-family: cambria;
+          top: 350px;
+          left: 600px;
+          position: absolute;
+        }
+        
+    </style>
+</head>
+<body>
+   <h1>Dropdown to list</h1>
+    <script>
+        var a=document.createElement("label")
+    var b=document.createTextNode("Enter a Text : ")
+    a.setAttribute("id","txt")
+    a.style.fontFamily="cambria"
+    a.style.fontSize="30px"
+    a.append(b)
+    document.body.append(a)
+        let input=document.createElement("input")
+  input.setAttribute("id","new")
+  input.setAttribute("type","text")
+  input.style.marginRight="10px"
+  input.placeholder="Enter a Text"
+  document.body.appendChild(input)
+
+  input.style.width="100px"
+  input.style.height="40px"
+  input.style.border="2px solid black"
+
+  let button=document.createElement("button")
+  button.textContent="ADD"
+  button.style.marginRight="10px"
+  button.addEventListener("click",add)
+  button.style.background="rgba(255, 255, 255, -0.2)"
+  document.body.appendChild(button)
+  button.style.width="100px"
+  button.style.height="40px"
+  button.style.border="5px solid black"
+
+let div1=document.createElement("div")
+document.body.appendChild(div1)
+
+  let select=document.createElement("select")
+  select.setAttribute("id","select")
+  document.body.appendChild(select)
+select.style.marginLeft="130px"
+  select.style.width="100px"
+  select.style.height="30px"
+  select.style.border="2px solid black"
+
+  let div=document.createElement("div")
+  let list=document.createElement("listBox")
+  list.setAttribute("id","li")
+  list.style.fontFamily="cambria"
+  list.style.fontSize="24px"
+  document.body.appendChild(list)
+  document.body.appendChild(div)
+   div.append(list)
+   div1.append(select)
+   div.style.marginLeft="400px"
+   div.style.marginTop="40px"
+
+  div.style.color="red"
+  div.style.width="100px"
+  div.style.border="2px solid black"
+
+
+  let option1=document.createElement("option")
+  option1.innerHTML="Option-1"
+  document.getElementById("select").appendChild(option1)
+
+
+  
+
+  let option=document.createElement("option")
+  option.innerHTML="ListBox"
+  document.getElementById("li").appendChild(option)
+
+
+
+
+function add() {
+  var userInput = input.value
+  if (userInput!=="") {
+    var option = document.createElement("option");
+    option.innerHTML = userInput;
+    document.getElementById("select").appendChild(option);
+    document.getElementById("new").value = '';
+  }
+
+  if (userInput!=="") {
+    var option = document.createElement("option");
+    option.innerHTML = userInput;
+    document.getElementById("li").appendChild(option);
+    document.getElementById("new").value = '';
+  }
+}
+       
+    </script>
+</body>
+</html>

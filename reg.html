@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // document.write("Groups in RegExp" +"<br>")
+        // let text="Aparna Mahalakshmi2002"
+        // let patt=/[A-ZA-za-z0-9]/ig;
+        // let op=text.match(patt)
+        // document.write(op +"<br>")
+
+        // let aa="aparna"
+        // var re = /^[a-z][0-9a-z]*$/i
+
+        // let text1="Aparna Mahalakshmi2002@#$%^s"
+        // let patt1=/[^A-ZA-za-z0-9]/ig;
+        // let op1=text1.match(patt1)
+        // document.write(op1 +"<br>")
+
+        // let text3="Aparna Mahalakshmi2002"
+        // let patt3=/[m|r|p]/ig;
+        // let op3=text3.match(patt3)
+        // document.write(op3 +"<br>")
+
+        // document.write("Meta char in RegExp" +"<br>")
+        // let tt="aparna"
+        // let pat1=/\w/ig;
+        // let pat=/\W/ig;
+        // let opp=tt.match(pat)
+        // let opp1=tt.match(pat1)
+        // document.write("Word char = "+opp1 + " Not a word = "+opp  +"<br>" )
+
+        // let tt1="aparna2002"
+        // let pattern=/\d/ig;
+        // let pattern1=/\D/ig;
+        // let output=tt1.search(pattern)
+        // let output1=tt1.match(pattern1)
+        // document.write("Digit char = "+output + " Not a Digit = "+output1 +"<br>" )
+
+        // let name="aparna 2002"
+        // let pattern2=/\s/ig;
+        // let pattern22=/\S/ig;
+        // let output2=name.search(pattern)
+        // let output22=name.search(pattern1)
+        // document.write("whitespace= "+output2 + " Not a whitespace = "+output22 +"<br>" )
+
+        // let name1="aparna-2002"
+        // let pattern3=/\120/ig;
+        // // let pattern33=/\uxxx/ig;
+        // let output3=name1.match(pattern3)
+        // // let output33=name1.search(pattern33)
+        // document.write("Octal(125) = "+output3  )
+
+
+
+        document.write("Quantifiers" +"<br>")
+        let text="Happy New Year 2024"
+        let pattern=/e+/g
+        let pattern1=/a*/g
+        let pattern2=/p?/g
+        // let pattern3=/{2}/g
+        document.write(text +"<br>")
+        document.write("Matches atleast one = " +text.match(pattern)+ "<br>")
+        document.write("Matches more than one = " +text.match(pattern1)+"<br>")
+        document.write("More than = " +text.match(pattern2)+"<br>")
+        // document.write("String contains seq of chr = " +text.match(pattern3))
+    </script>
+</body>
+</html>

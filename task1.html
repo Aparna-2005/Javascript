@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade</title>
+    <style>
+        body{
+            background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+       text-align: center;
+        }
+        label{
+            font-size: 24px;
+            font-family: cambria;
+        }
+        #roll,#name,#m1,#m2,#m3{
+            width:100px;
+            height: 25px;
+            padding: 5px;
+        }
+        div{
+            border:10px solid black;
+            text-align: justify;
+            width:500px;
+            padding: 100px;
+            margin: 80px;
+        }
+        button{
+            width:100px;
+            height: 25px;
+            border:3px outset black
+        }
+    </style>
+    
+</head>
+<body>
+
+    <center>
+        <h1>STUDENT DETAILS</h1>
+        <div>
+            <form onsubmit="sub()">
+                <table>
+                    <tr>
+                        <td> <label>Enter RollNo : </label></td>
+                        <td><input type="text" id="roll" placeholder="Enter rollno here..."></td>
+                    </tr>
+                    <tr>
+                        <td><label>Enter name :</label></td>
+                        <td><input type="text" id="name" placeholder="Enter Name here..."></td>
+                    </tr>
+                    <tr>
+                        <td> <label>Enter First Mark : </label></td>
+                        <td><input type="number" id="m1" placeholder="mark1"></td>
+                    </tr>
+                    <tr>
+                        <td> <label>Enter Second Mark : </label></td>
+                        <td><input type="number" id="m2" placeholder="mark2"></td>
+                    </tr>
+                    <tr>
+                        <td><label>Enter Third Mark : </label></td>
+                        <td><input type="number" id="m3" placeholder="mark3"></td>
+                    </tr>
+                    <tr >
+                        <td> <button>Submit</button> <button onclick="getval()">Get</button></td>
+                    </tr>
+                </table>
+               
+            </form>
+           
+            <table cellspacing="8">
+                <tr>
+                    <th>Roll No.</th>
+                    <th>Name</th>
+                    <th>Mark 1</th>
+                    <th>Mark 2</th>
+                    <th>Mark 3</th>
+                    <th>Total</th>
+                    <th>Grade</th>
+                    <th>Result</th>
+                </tr>
+                <tbody id="showdata"></tbody>
+            </table>
+        </div>
+       
+    </center>
+    
+    <input type="button" id="btn" value="submit" onclick="sub()">
+    <script>
+         function sub(){
+            let roll=document.getElementById("roll")
+        let name= document.getElementById("name")
+        let m1=document.getElementById("m1")
+        let m2=document.getElementById("m2")
+        let m3=document.getElementById("m3")
+        let sum=0
+        sum=m1+m2+m3
+        let avg=sum/3
+        if(avg>90){
+            let grade=" Grade A"
+            let res = "Pass"
+
+        }
+        else if(avg>75 && avg<90){
+            let grade=" Grade B"
+            let res = "Pass"
+            console.log("Grade : " +grade+ "" +"\n"+ "Result : " +res)
+        }
+        else if(avg>60 && avg<75){
+            let grade=" Grade C"
+            let res = "Pass"
+            console.log("Grade : " +grade+ "" +"\n"+ "Result : " +res)
+        }
+        else if(avg>45 && avg<60){
+            let grade=" Grade D"
+            let res = "Pass"
+            console.log("Grade : " +grade+ "" +"\n"+ "Result : " +res)
+        }
+        else{
+            let grade=" Grade E"
+            let res = "Fail"
+            console.log("Grade : " +grade+ "" +"\n"+ "Result : " +res)
+        }
+        let obj={
+           roll:roll,
+           name:name,
+           m1:m1,
+           m2:m2,
+           m3:m3,
+           tot:sum,
+           grade:grade,
+           res:res
+        }
+        let storedata=localStorage.getItem("userdata")
+        let passdata=storedata ? JSON.parse(storedata) : []
+        passdata.push(obj)
+        localStorage.setItem("userdata",JSON.stringify(passdata));
+        alert("data stored")
+        }
+
+        function getval(){
+            let a1=localStorage.getItem("userdata")
+            let a2=a1 ? JSON.parse(a1) : []
+            a2.map((value) => {
+                showdata.innerHTML+=`<tr><td> ${value.roll}</td> <td> ${value.name}</td> <td> ${value.m1}</td> <td> ${value.m2}</td> <td> ${value.m3}</td> <td> ${value.tol}</td> <td> ${value.grade}</td> <td> ${value.res}</td> </tr>`
+            })
+        }
+
+    </script>
+</body>
+</html>

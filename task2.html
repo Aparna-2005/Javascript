@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        #no{
+            width:100px;
+            height:25px
+        }
+        label{
+            font-size: 24px;
+            font-family: cambria;
+        }
+        button{
+            width:75px;
+            height: 35px;
+            font-family: cambria;
+            border:3px solid black;
+            color:white;
+            background-color: orangered;
+            padding: 2px;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <!--  -->
+    <form>
+        <label>Enter Input : </label>
+        <input type="text" id="no" placeholder="Enter number">
+        <h1 id="cal"></h1>
+    </form>
+    <button onclick="add()" class="btn1">ADD</button>
+    <button onclick="sub()" class="btn1">SUB</button>
+    <button onclick="mul()" class="btn1">MULTIPLY</button>
+    <button onclick="div()" class="btn1">DIVISION</button><br><br>
+    <button onclick="resetInput()" class="btn2">RESET INPUT</button>
+    <button onclick="resetOutput()" class="btn3">RESET OUTPUT</button>
+
+
+    <script>
+        function add(){
+            let n1=document.getElementById("n1").value
+        let num=Number(n1)
+        let sum=0
+        while(num>0){
+            let rem=num%10
+            sum=sum+rem
+            num=Math.floor(num/10)
+        }
+                  let val=document.getElementById("cal").innerHTML=sum
+        }
+
+        function mul(){
+            let num=document.getElementById("no").value
+            let product = 1;
+            while (num != 0) {
+            product = product * (num % 10);
+            num = Math.floor(num / 10);
+            }
+                  let val=document.getElementById("cal").innerHTML=product
+        }
+
+        function resetInput() {
+            
+            document.getElementById('no').value = '';
+        }
+
+        function resetOutput() {
+            
+            document.getElementById('cal').innerHTML = '';
+        }
+
+    </script>
+</body>
+</html>

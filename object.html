@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="head"></h1>
+    <p id="demo"></p>
+    <script>
+      task - 1
+        let vehicle = {
+          Name : "Mercedes Benz",
+          Model  : "C-Class",
+          Manufacture:"Daimler AG Company",
+          Lenght:"4686mm",
+          Cargo_capacity:"12.6 cubic feet"
+        };
+        console.log("Details of the Vehicle")
+        console.log(vehicle)
+        // document.getElementById("head").innerHTML = "Details of the Vehicle"; 
+        // document.getElementById("demo").innerHTML = "Name = " +vehicle.Name + " " +"<br>"+ "Model = " + vehicle.Model+ " " +"<br>"+ "Manufacture = " + vehicle.Manufacture+ " " +"<br>"+ "Length = " + vehicle.Lenght+ " " +"<br>"+ "Cargo Capacity = " + vehicle.Cargo_capacity;
+        
+        let movie = {
+          Title : "Baahubali",
+          Director  : "Rajamouli",
+          Producers:["sobhu","Raghavendra","Prasad"],
+          lead_actors_with_their_roles:{
+                    prabhas:"Baahubali",
+                    Anushka:"Devasena",
+                    Rana:"Ballaladeva",
+                    Tamannah:"Avantika"
+          }
+        };
+        document.getElementById("head").innerHTML = "Details of the Movie"; 
+        document.getElementById("demo").innerHTML = "Movie title = " +movie.Title + " " +"<br>"+ "Director = " + movie.Director+ " " +"<br>"+ "Producer = " + movie.Producers+ " " +"<br>"+ "<b>Lead Actor with their roles :<b> " +"<br>"+ "Prabhas as " + movie.lead_actors_with_their_roles.Prabhas+ " " +"<br>"+ "Anushka as " + movie.lead_actors_with_their_roles.Anushka+ "" +"<br>"+ "Rana as  " + movie.lead_actors_with_their_roles.Rana+ ""+"<br>"+ "Tamannah as  " + movie.lead_actors_with_their_roles.Tamannah+ "";
+
+        </script>
+</body>
+</html>

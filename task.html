@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin-top: 250px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <center>
+        <h3> Verify valid password Example </h3>
+
+        <form >
+            <label>Enter password : </label>
+        <input type="name" id="name" placeholder="Enter password"><br><br>
+        <label>Re-Enter Password : </label>
+            <input type="password" id="pswd" value="" placeholder="Re-enter Password">
+            <span id="message" style="color:red"> </span> <br><br>
+            <input onclick="verifyPassword()" type="submit" value="Submit">
+
+        </form>
+    </center>
+    <script>
+        function verifyPassword() {
+            var name = document.getElementById("name").value;
+            var pw = document.getElementById("pswd").value;
+            if (pw == "") {
+                    alert("Enter any password")
+                }
+         else if (name != pw){
+                    alert("password Must be same")
+                }
+            else if ((pw.length < 6) || (pw.length > 15)) {
+                alert("Password length must be mininum 6 and maximum 15 characters")
+                // document.getElementById("message").innerHTML = "Password length must be mininum 6 and maximum 15 characters";
+            }
+            else {
+                alert("Password is correct");
+            }
+        }
+    </script>
+    
+</body>
+
+</html>

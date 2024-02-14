@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(Math.floor(Math.random() * 10));//5
+        console.log(Math.floor(Math.random() * 20));//15
+        console.log(Math.floor(Math.random() * 1));//0
+
+
+        rand = function(min, max) {
+  if (min==null && max==null)
+    return 0;
+  if (max == null) {
+      max = min;
+      min = 0;
+    }s
+    return min + Math.floor(Math.random() * (max - min ));
+  };
+ console.log(rand(20,1));
+ console.log(rand(1,10));
+ console.log(rand(6));
+ console.log(rand());
+ 
+    </script>
+</body>
+</html>

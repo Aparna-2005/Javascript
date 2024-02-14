@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            font-size: 25px;
+            font-family: cambria;
+            border:10px solid black;
+            color:red;
+            text-align: justify;
+            width:300px;
+            padding: 50px;
+        }
+        body{
+            background-image: linear-gradient(to bottom right,cyan,pink);
+        }
+    </style>
+    
+</head>
+<body>
+    <center>
+        <h1>Movie Details</h1>
+        <div id="div1"></div>
+    </center>
+    <script>
+       
+
+const dynamicKey1 = 'Title';
+const dynamicValue1 = "Baahubali";
+ 
+const dynamicKey2 = 'Director';
+const dynamicValue2 = 'Rajamouli';
+
+const dynamicKey3 = 'Music';
+const dynamicValue3 = 'anirudhs';
+
+const dynamicKey4 = 'Hero';
+const dynamicValue4 = 'Prabhas';
+
+const dynamicKey5 = 'Heroin';
+const dynamicValue5 = 'Anushka';
+
+const dynamicKey6 = 'Poster';
+const dynamicValue6 = '<img src="https://upload.wikimedia.org/wikipedia/en/9/93/Baahubali_2_The_Conclusion_poster.jpg">';
+ 
+const movie = {
+    [dynamicKey1]: dynamicValue1,
+    [dynamicKey2]: dynamicValue2,
+    [dynamicKey3]: dynamicValue3,
+    [dynamicKey4]: dynamicValue4,
+    [dynamicKey5]: dynamicValue5,
+    [dynamicKey6]: dynamicValue6,
+   
+};
+
+
+
+        let get=document.getElementById("div1")
+        get.innerHTML="Movie title : " +movie.Title + " " +"<br>"+ "Director : " + movie.Director+ " " +"<br>"+ "Music : " + movie.Music+" " +"<br>"+"Hero : " + movie.Hero+" " +"<br>"+"Heroin : " + movie.Heroin+" " +"<br>"+"Poster : " +"<br>" + movie.Poster;
+
+    </script>
+</body>
+</html>

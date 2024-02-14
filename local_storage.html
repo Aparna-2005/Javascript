@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local storage</title>
+</head>
+<body>
+    <form onsubmit="sub()">
+        <label>Enter your name: </label>
+        <input type="text" id="name" ><br>
+        <label>Enter your password: </label>
+        <input type="password" id="pw" ><br>
+        <button>Submit</button>
+    </form>
+    <button onclick="getval()">Get</button>
+    <table cellspacing="8">
+        <tr>
+            <th>Name</th>
+            <th>Password</th>
+        </tr>
+        <tbody id="showdata"></tbody>
+    </table>
+    
+    <script>
+         function sub(){
+            let name=document.getElementById("name").value;
+            let psw=document.getElementById("pw").value;
+        let obj={
+            name:name,
+            password:psw
+        }
+        let storedata=localStorage.getItem("userdata")
+        let passdata=storedata ? JSON.parse(storedata) : []
+        passdata.push(obj)
+        localStorage.setItem("userdata",JSON.stringify(passdata));
+        alert("data stored")
+        }
+
+        function getval(){
+            let a1=localStorage.getItem("userdata")
+            let a2=a1 ? JSON.parse(a1) : []
+            a2.map((value) => {
+                showdata.innerHTML+=`<tr><td> ${value.name}</td> <td> ${value.password}</td </tr>`
+            })
+        }
+
+        
+
+        // localStorage.setItem("fname","Aparna")
+        // let fname=localStorage.getItem("fname");
+        // document.write("First name  : " +fname +'<br>')
+        // localStorage.setItem("lname","mahalaskhmi" )
+        // let lname=localStorage.getItem("lname")
+        // document.write("Last name : " +lname)
+        // localStorage.removeItem("fname")
+        // localStorage.clear()
+    </script>
+</body>
+</html>

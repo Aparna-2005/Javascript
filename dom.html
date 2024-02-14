@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1 id="heading">Welcome to learn DOM concept</h1>
+    events perform some action when you click some action 
+    onclick  is a event name
+    <button onclick="jerry()">Click</button>
+    <script>
+        // function jerry(){
+           // to reduce reuse of code we declare ID by storing it in a variable.
+        //    var a= document.getElementById("heading")
+        //    a.innerHTML="hello guys"
+        //    a.style.color="red"
+        //    a.style.backgroundColor="pink"
+        //    a.style.fontSize="55px"
+            // document.getElementById("heading").innerHTML="hello"
+            // document.getElementById("heading").textContent="hello"
+
+            // innerText and textContent are same
+            // textContent print the tag which we gave it in a content.
+        // }
+    </script> -->
+<script>
+    //setAttribute and getAttribute
+    // var a = document.createElement("img")
+    // a.setAttribute("src","https://w0.peakpx.com/wallpaper/623/30/HD-wallpaper-brown-pencil-on-white-book-beside-black-eyeglasses-thumbnail.jpg")
+    // document.body.append(a)
+    // document.write(a.getAttribute("src"))
+
+    // task -1
+    var a=document.createElement("div")
+    var b=document.createTextNode("Login Page")
+    var c=document.createElement("input")
+    c.setAttribute("type","text")
+    var d=document.createElement("button")
+    var e=document.createTextNode("Click")
+    d.append(e)
+    a.append(b)
+    a.append(c)
+    a.append(d)
+    document.body.append(a)
+
+
+
+    // a.style.display="flex"
+    // a.style.flexDirection="column"
+    // a.style.width="200px"
+    // a.style.margin="20px"
+    // d.style.width="100px"
+
+</script>
+
+</body>
+</html>

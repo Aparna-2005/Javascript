@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+    <style>
+        .div{
+            text-align: center;
+        }
+        form{
+ padding-top: 60px;  
+ padding-left: 30px;
+ text-align: center;  
+}
+label{
+            font-size: 24px;
+            font-family: cambria;
+        }
+        #fname,#lname,#dob{
+            width:120px;
+            height: 25px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form >
+            <label>Enter First name : </label>
+            <input type="text" id="fname" placeholder="fname"><br><br>
+            <label>Enter Last name : </label>
+            <input type="text" id="lname" placeholder="lname"><br><br>
+            <label>Enter Date of Birth : </label>
+            <input type="date" id="dob" placeholder="dob"><br><br>
+            <input type="button" id="btn" value="SUBMIT" onclick="sub()">
+        </form>
+    </div>
+    <div class="div">
+        <h1>Details</h1>
+        <h3 id="demo"></h3>
+    </div>
+    <script>
+        function sub(){
+            var fname=document.getElementById("fname").value
+    var lname=document.getElementById("lname").value
+    var dob=document.getElementById("dob").value
+  
+    var input=new Date(dob)
+    var year=input.getFullYear();
+
+    if(fname==" " || lname=="" || dob==""){
+     alert("Enter the details!")
+    }
+    else{
+        var pwd=fname+ "@" +year;
+        alert("password : " +pwd)
+    }
+    
+    var det={
+        "fname" : fname,
+        "lname" : lname,
+        "dob" : dob,
+        "password" : pwd
+    }
+
+      var fetch=JSON.stringify(det)
+
+       var obj = JSON.parse(fetch)
+       document.getElementById("demo").innerHTML+="Fname : " +obj.fname+ "" +"<br>"+ "Last name : " +obj.lname+ "" +"<br>"+ "Date of Birth : " +obj.dob+ ""+"<br>"+ "Password : " +obj.password
+    //    document.write("Fname : " +det.fname+ "" +"<br>"+ "Last name : " +obj.lname+ "" +"<br>"+ "Date of Birth : " +obj.dob+ ""+"<br>"+ "Password : " +obj.password+ "")
+
+}
+ 
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="n1">
+    <!-- <input type="number" id="n2"> -->
+    <button onclick="sub()">Submit</button>
+    <script>
+        /*function sub(){
+            let n1=document.getElementById("n1").value
+        let num=Number(n1)
+        let sum=0
+        while(num>0){
+            let rem=num%10
+            sum=sum+rem
+            num=Math.floor(num/10)
+        }
+        document.write(sum)
+        }*/
+
+        function sub(){
+            let n1=document.getElementById("n1").value
+        let num=Number(n1)
+        let sum=1
+        while(num>0){
+            let rem=num%10
+            sum/=rem
+            num=Math.floor(num/10)
+        }
+        document.write(sum)
+        }
+
+    </script>
+</body>
+</html>

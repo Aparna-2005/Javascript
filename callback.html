@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback</title>
+</head>
+<body>
+    <script>
+       /* function iseven(cb){
+        }
+        function isodd(num){
+            if(num%2==0){
+                document.write(num+ " - False" +"<br>")
+            }
+            else{
+                document.write(num+ " - True" +"<br>")
+            }
+        }
+        document.write("Odd or Even" +"<br>")
+       iseven(isodd(5))
+       iseven(isodd(4))*/
+
+
+    //    function str(cb){
+        
+    //     }
+    //     function strr(sym){
+    //         let string="Hello"
+    //         let str2=string.concat(sym)
+    //         document.write(str2)
+    //     }
+    //     str(strr("!"))
+
+                  //  task - 3
+/*const doubleChars = (str) =>
+  str
+    .split("")
+    .map((c) => `${c}${c}`)
+    .join("");
+document.write("Double the characters in a string" +"<br>")
+document.write(doubleChars("Adrian" ));
+document.write("<br>")
+document.write(doubleChars("ssssnake"));
+
+
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+}
+
+function myCalculator(num1, num2, myCallback) {
+  let sum = num1 + num2;
+  myCallback(sum);
+}
+
+myCalculator(5, 5, myDisplayer);*/
+
+function arith1(sum){
+     document.getElementById("demo").innerHTML=sum
+}
+function ope(a,b, cb){
+  let add=a+b
+    cb(add);
+}
+ope(5,1,arith1)
+    </script>
+    <p id="demo"></p>
+</body>
+</html>

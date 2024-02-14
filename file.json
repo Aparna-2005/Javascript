@@ -1,0 +1,36 @@
+[
+    {
+        "id":1,
+        "name":"Aparna",
+        "age":21,
+        "img":"https://freepngimg.com/save/19888-cat-png-9/828x957"
+    },
+    {
+        "id":2,
+        "name":"Maha",
+        "age":22,
+        "img":"https://freepngimg.com/save/19888-cat-png-9/828x957"
+
+    },
+    {
+        "id":3,
+        "name":"Lakshmi",
+        "age":23,
+        "img":"https://freepngimg.com/save/19888-cat-png-9/828x957"
+
+    },
+    {
+        "id":4,
+        "name":"Atchaya",
+        "age":27,
+        "img":"https://freepngimg.com/save/19888-cat-png-9/828x957"
+
+    },
+    {
+        "id":5,
+        "name":"Anurag",
+        "age":29,
+        "img":"https://freepngimg.com/save/19888-cat-png-9/828x957"
+
+    }
+]

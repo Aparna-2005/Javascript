@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .div1{
+            background-color: grey;
+            width:200px;
+            height:500px;
+            border-radius: 90px;
+            margin-left: 560px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .div2{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border:2px solid black;
+            align-items: center;
+            margin-top: 50px;
+            margin-left: 50px;
+            background-color: black;
+        }
+        .div3{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border:2px solid black;
+            margin-top: 40px;
+            margin-left: 50px;
+            background-color: black;
+        }
+        .div4{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border:2px solid black;
+            margin-top: 40px;
+            margin-left: 50px;
+            background-color: black;
+        }
+        .box1{
+            position: absolute;
+            top:200px;
+            left:450px;
+        }
+        .box3{
+            margin-top: 110px;
+        }
+        .box4{
+            margin-top: 100px;
+        }
+       button{
+        width:80px;
+        height:40px;
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+       }
+    </style>
+</head>
+<body>
+    <h1>TRAFFIC LIGHT</h1>
+    <div class="div1">
+        <div class="div2 " id="stops"></div>
+        <div class="div3" id="waits"></div>
+        <div class="div4" id="goes"></div>
+    </div>
+    <div class="box1">
+        <div class="box2"><button onclick="stop()">Stop</button></div>
+        <div class="box3"><button onclick="wait()">Wait</button></div>
+        <div class="box4"><button onclick="go()">Go</button></div>
+    </div>
+    <script>
+        function stop(){
+            let a=document.getElementById("stops")
+            a.style.backgroundColor="red"
+            let g=document.getElementById("goes")
+            g.style.backgroundColor="black"
+            let h=document.getElementById("waits")
+            h.style.backgroundColor="black"
+        }
+        function wait(){
+            let b=document.getElementById("waits")
+            b.style.backgroundColor="yellow"
+            let c=document.getElementById("stops")
+            c.style.backgroundColor="black"
+            let i=document.getElementById("goes")
+            i.style.backgroundColor="black"
+        }
+        function go(){
+            let d=document.getElementById("goes")
+            d.style.backgroundColor="green"
+            let e=document.getElementById("stops")
+            e.style.backgroundColor="black"
+            let f=document.getElementById("waits")
+            f.style.backgroundColor="black"
+        }
+    </script>
+</body>
+</html>

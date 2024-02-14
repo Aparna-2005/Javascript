@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .div1{
+    text-align: right;
+    background-color: #8080ff;
+    width:650px;
+    height:450px;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: 150px;
+    margin-top: 80px;
+    margin-bottom: auto;
+} 
+form{
+ padding-top: 60px;  
+ padding-left: 30px;
+ text-align: justify;  
+}
+label{
+            font-size: 24px;
+            font-family: cambria;
+        }
+        #roll,#name,#m1,#m2,#m3{
+            width:120px;
+            height: 25px;
+            padding: 5px;
+        }
+        .div2{
+    text-align: center;
+    background-color: white;
+    width:700px;
+    height:380px;
+    margin-right: 10px;
+    position: absolute;
+    left:550px;
+    top:200px;
+}
+#btn{
+    width:79px;
+    height:37px;
+    padding:8px;
+    border:2px solid white;
+    /* border-color: white; */
+    font-size: 17px;
+    color: white;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2); 
+    background-color: rgba(255, 255, 255, -0.2);
+    margin-left:150px;
+    margin-top:20px;
+       }
+       #tbl{
+        margin-top: 20px;
+        margin-left: 35px;
+       }
+       h1{
+        color:#008000;
+        font-weight: bold;
+        font-size: 45px;
+       }
+    </style>
+   
+</head>
+<body bgcolor="	 #1a53ff">
+    <center>
+        <h1>STUDENT DETAILS</h1>
+    </center>
+    <main>
+            <div class="div1">
+                <form onsubmit="sub()">
+                    <table>
+                        <tr>
+                            <td> <label>Enter RollNo : </label></td>
+                            <td><input type="text" id="roll" placeholder="Enter rollno here..."></td>
+                        </tr>
+                        <tr>
+                            <td><label>Enter name :</label></td>
+                            <td><input type="text" id="name" placeholder="Enter Name here..."></td>
+                        </tr>
+                        <tr>
+                            <td> <label>Enter First Mark : </label></td>
+                            <td><input type="number" id="m1" placeholder="mark1"></td>
+                        </tr>
+                        <tr>
+                            <td> <label>Enter Second Mark : </label></td>
+                            <td><input type="number" id="m2" placeholder="mark2"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Enter Third Mark : </label></td>
+                            <td><input type="number" id="m3" placeholder="mark3"></td>
+                        </tr>
+                        <tr >
+                            <th colspan="2"> <input type="button" id="btn" value="SUBMIT" onclick="sub()"></th>
+                        </tr>
+                    </table>
+                </form>
+                      <div  class="div2">
+                        <table cellspacing="8" id="tbl" border="2" cellpadding="10">
+                            <tr>
+                                <th>Roll No.</th>
+                                <th>Name</th>
+                                <th>Mark 1</th>
+                                <th>Mark 2</th>
+                                <th>Mark 3</th>
+                                <th>Total</th>
+                                <th>Grade</th>
+                                <th>Result</th>
+                            </tr>
+                            <tbody id="showdata"></tbody>
+                        </table>
+                      </div>
+            </div>
+
+            <script>
+                function sub(){
+                    let roll=document.getElementById("roll")
+                let name= document.getElementById("name")
+                let m1=document.getElementById("m1").value
+                mark1=Number(m1)
+                let m2=document.getElementById("m2").value
+                mark2=Number(m2)
+                let m3=document.getElementById("m3").value
+                mark3=Number(m3)
+                let sum=0
+                sum=mark1+mark2+mark3
+                let avg=Math.floor((sum/300)*100)
+                // document.write(avg)
+                if(avg>90){
+                    grade=" Grade A"
+                    res = "Pass"
+                }
+                else if(avg>75 && avg<90){
+                    grade=" Grade B"
+                res = "Pass"
+                    
+                }
+                else if(avg>60 && avg<75){
+                    grade=" Grade C"
+                    res = "Pass"
+                }
+                else if(avg>45 && avg<60){
+                    grade=" Grade D"
+                    res = "Pass"
+                }
+                else{
+                    grade=" Grade E"
+                    res = "Fail"
+                }
+                document.getElementById("showdata").innerHTML+="<tr><td>" +roll.value+ "</td><td>" +name.value+ "</td><td>" +mark1+ "</td><td>" +mark2+ "</td><td>" +mark3+ "</td><td>" +sum+  "</td><td>" +grade+ "</td><td>" +res+ "</tr>"
+            roll.innerHTML=''
+                }
+            </script>
+</body>
+</html>

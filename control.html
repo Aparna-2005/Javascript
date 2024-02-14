@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // for loop
+        // console.log("printing numbers from 20 to 0")
+        // for(var i=20; i>=0; i--){
+        //     console.log(i)
+        // }
+
+    // for loop
+        // console.log("Multiplication 3")
+        // n=parseInt(prompt("Enter Any number:"))
+        // for(var m=1; m<=10; m++){
+        // var prdt=m*n;
+        // console.log(n+ " * " +m+ " = " +prdt)
+        // } 
+
+    // while loop
+            // let a=0;
+            // while(a<=10){
+            //     console.log(a)
+            //     a++
+            // }
+
+    // nested loop
+                // let a;
+                // for(a=0; a<=5;a++){
+                //     console.log(a)
+                //     for(var b=5;b>=0;b++)
+                //     {
+                //         console.log(b)
+                //     }
+                // }
+
+    //  for loop
+    var sum = 0;
+    console.log("Factors of 3 and 5 till 10 is ")
+for (var i = 1; i <=10; i++)
+{
+    if (i% 3 === 0 || i % 5 === 0)
+    {
+       sum += i;
+       console.log(i)
+    }
+}
+
+console.log("Sum of multiplication of 3 and 5 is "+sum);
+
+// task - 4
+
+for(var i=1; i<=100; i++){
+    if(i%3==0 && i%5==0){
+        console.log(i+ " FizzBuzz")
+    }
+    else if(i%3==0){
+        console.log(i+ " Fizz")
+    }
+    else if(i%5==0){
+        console.log(i+ " Buzz")
+    }
+    else{
+        console.log(i)
+    }
+}
+    
+// task - 5
+var num1=3, num2=5
+for( var  i=1; i <= num1 && i <= num2; i++){
+    if((num1%i==0) && (num2%i==0)){
+        let gcd=i;
+        console.log("GCD for " +num1+ " and " +num2+ " is " +gcd)
+    }
+}
+
+
+
+
+
+        // conditional stt - task - 2
+// for(var i=0; i<=15; i++)
+// {
+//     if((i/2)==0){
+//         console.log( i+ " is even number")
+//     }
+//     else{
+//         console.log( i+ " is odd number")
+//     }
+// }
+    </script>
+</body>
+</html>
